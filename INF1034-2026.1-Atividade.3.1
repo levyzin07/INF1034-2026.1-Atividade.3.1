@@ -1,1 +1,119 @@
+from turtle import *
 
+t = Turtle()
+
+import random
+
+# Fazendo o plano cartesiano
+
+t.penup()
+t.goto(-300,0)
+t.pendown()
+
+t.fd(600)
+t.stamp()
+
+t.lt(90)
+
+t.penup()
+t.goto(0,-300)
+t.pendown()
+
+t.fd(600)
+t.stamp()
+
+
+# Fazendo a função das formas
+
+def funcao_pentagono (x,y,tamanho,color):
+   t.penup() 
+   t.goto(x, y)
+   t.pendown()
+
+   t.begin_fill()
+   t.color(color)
+
+   for _ in range(5):
+       t.fd (tamanho)
+       t.lt (72)
+
+   t.end_fill()
+
+color = textinput ("Escolha uma cor para o pentágono:", "Escolha uma cor para o pentágono:")
+x = random.randint (-200,-100)
+y = random.randint (100,200)
+tamanho = random.randint (0,100)
+
+funcao_pentagono(x,y,tamanho,color)
+
+
+
+def funcao_hexagono (x,y,tamanho,color):
+   t.penup() 
+   t.goto(x, y)
+   t.pendown()
+
+   t.begin_fill()
+   t.color(color)
+
+   for _ in range(6):
+    t.fd (tamanho)
+    t.rt (60)
+
+t.end_fill()
+
+color = textinput ("Escolha uma cor para o hexágono:", "Escolha uma cor para o hexágono:")
+x = random.randint (100,200)
+y = random.randint (100,200)
+tamanho = random.randint (0,100)
+
+funcao_hexagono(x,y,tamanho,color)
+
+
+
+def funcao_octagono (x,y,tamanho,color):
+   t.penup() 
+   t.goto(x, y)
+   t.pendown()
+
+   t.begin_fill()
+   t.color(color)
+
+   for _ in range(8):
+    t.fd (tamanho)
+    t.rt (45)
+
+t.end_fill()
+
+color = textinput ("Escolha uma cor para o octagono:", "Escolha uma cor para o octagono:")
+x = random.randint (-300,-200)
+y = random.randint (-300,-200)
+tamanho = random.randint (0,100)
+
+funcao_octagono(x,y,tamanho,color)
+
+
+
+def funcao_dodecagono (x,y,tamanho,color):
+   t.penup() 
+   t.goto(x, y)
+   t.pendown()
+
+   t.begin_fill()
+   t.color(color)
+
+   for _ in range(12):
+    t.fd (tamanho)
+    t.rt (30)
+
+t.end_fill()
+
+color = textinput ("Escolha uma cor para o dodecagono:", "Escolha uma cor para o dodecagono:")
+x = random.randint (0,100)
+y = random.randint (-300,-200)
+tamanho = random.randint (0,100)
+
+funcao_dodecagono(x,y,tamanho,color)
+
+
+mainloop()
